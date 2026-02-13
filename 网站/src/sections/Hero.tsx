@@ -63,11 +63,10 @@ const Hero = () => {
           <div className="order-2 lg:order-1 flex flex-col justify-center py-12 lg:py-0">
             <div className="overflow-hidden">
               <h1
-                className={`text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight transition-all duration-1000 ease-impact ${
-                  isVisible
+                className={`text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight transition-all duration-1000 ease-impact ${isVisible
                     ? 'translate-y-0 opacity-100'
                     : 'translate-y-full opacity-0'
-                }`}
+                  }`}
               >
                 防弹玻璃
                 <br />
@@ -77,11 +76,10 @@ const Hero = () => {
 
             <div className="overflow-hidden mt-6">
               <p
-                className={`text-lg sm:text-xl text-white/70 max-w-lg transition-all duration-1000 ease-impact delay-300 ${
-                  isVisible
+                className={`text-lg sm:text-xl text-white/70 max-w-lg transition-all duration-1000 ease-impact delay-300 ${isVisible
                     ? 'translate-y-0 opacity-100'
                     : 'translate-y-full opacity-0'
-                }`}
+                  }`}
               >
                 为汽车、建筑及安全领域提供尖端防护。
                 <br className="hidden sm:block" />
@@ -90,11 +88,10 @@ const Hero = () => {
             </div>
 
             <div
-              className={`flex flex-wrap gap-4 mt-10 transition-all duration-1000 ease-impact delay-500 ${
-                isVisible
+              className={`flex flex-wrap gap-4 mt-10 transition-all duration-1000 ease-impact delay-500 ${isVisible
                   ? 'translate-y-0 opacity-100'
                   : 'translate-y-8 opacity-0'
-              }`}
+                }`}
             >
               <button
                 onClick={scrollToProducts}
@@ -113,29 +110,28 @@ const Hero = () => {
 
             {/* Stats */}
             <div
-              className={`grid grid-cols-3 gap-6 mt-16 transition-all duration-1000 ease-impact delay-700 ${
-                isVisible
+              className={`grid grid-cols-3 gap-4 sm:gap-6 mt-12 sm:mt-16 transition-all duration-1000 ease-impact delay-700 ${isVisible
                   ? 'translate-y-0 opacity-100'
                   : 'translate-y-8 opacity-0'
-              }`}
+                }`}
             >
               <div>
-                <div className="text-3xl sm:text-4xl font-bold text-[#e03000]">
+                <div className="text-2xl sm:text-3xl font-bold text-[#e03000]">
                   20+
                 </div>
-                <div className="text-sm text-white/50 mt-1">年行业经验</div>
+                <div className="text-[10px] sm:text-xs text-white/50 mt-1 uppercase tracking-wider">行业经验</div>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl font-bold text-[#e03000]">
+                <div className="text-2xl sm:text-3xl font-bold text-[#e03000]">
                   6
                 </div>
-                <div className="text-sm text-white/50 mt-1">防护等级</div>
+                <div className="text-[10px] sm:text-xs text-white/50 mt-1 uppercase tracking-wider">防护等级</div>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl font-bold text-[#e03000]">
+                <div className="text-2xl sm:text-3xl font-bold text-[#e03000]">
                   1000+
                 </div>
-                <div className="text-sm text-white/50 mt-1">成功案例</div>
+                <div className="text-[10px] sm:text-xs text-white/50 mt-1 uppercase tracking-wider">成功案例</div>
               </div>
             </div>
           </div>
@@ -143,11 +139,10 @@ const Hero = () => {
           {/* Right Column - Image */}
           <div className="order-1 lg:order-2 flex items-center justify-center lg:justify-end lg:mt-24">
             <div
-              className={`relative w-full max-w-md lg:max-w-lg xl:max-w-xl transition-all duration-1200 ease-glass delay-300 overflow-hidden rounded-2xl ${
-                isVisible
+              className={`relative w-full max-w-md lg:max-w-lg xl:max-w-xl transition-all duration-1200 ease-glass delay-300 overflow-hidden rounded-2xl ${isVisible
                   ? 'clip-path-full opacity-100'
                   : 'clip-path-zero opacity-0'
-              }`}
+                }`}
               style={{
                 clipPath: isVisible
                   ? 'inset(0 0 0 0)'
@@ -166,14 +161,13 @@ const Hero = () => {
 
               {/* Floating badge */}
               <div
-                className={`absolute -bottom-6 -left-6 bg-[#e03000] text-white px-6 py-4 rounded-xl shadow-2xl transition-all duration-1000 ease-impact delay-1000 ${
-                  isVisible
+                className={`absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-[#e03000] text-white px-5 py-3 sm:px-6 sm:py-4 rounded-xl shadow-2xl transition-all duration-1000 ease-impact delay-1000 ${isVisible
                     ? 'translate-y-0 opacity-100'
                     : 'translate-y-8 opacity-0'
-                }`}
+                  }`}
               >
-                <div className="text-2xl font-bold">GA165-2016</div>
-                <div className="text-sm text-white/80">国标认证</div>
+                <div className="text-xl sm:text-2xl font-bold">GA165-2016</div>
+                <div className="text-xs sm:text-sm text-white/80">国标认证</div>
               </div>
             </div>
           </div>
@@ -182,9 +176,8 @@ const Hero = () => {
 
       {/* Scroll indicator */}
       <div
-        className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-all duration-1000 ease-impact delay-1000 ${
-          isVisible ? 'opacity-100' : 'opacity-0'
-        }`}
+        className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-all duration-1000 ease-impact delay-1000 ${isVisible ? 'opacity-100' : 'opacity-0'
+          }`}
       >
         <button
           onClick={scrollToAbout}

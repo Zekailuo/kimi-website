@@ -70,11 +70,10 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left Column - Image */}
           <div
-            className={`relative transition-all duration-1000 ease-impact ${
-              isVisible
+            className={`relative transition-all duration-1000 ease-impact ${isVisible
                 ? 'translate-x-0 opacity-100'
                 : '-translate-x-12 opacity-0'
-            }`}
+              }`}
           >
             <div
               className="relative aspect-video overflow-hidden"
@@ -91,19 +90,18 @@ const About = () => {
             </div>
 
             {/* Experience badge */}
-            <div className="absolute -bottom-8 -right-4 lg:right-8 bg-[#1a1a1a] text-white px-8 py-6 rounded-xl shadow-2xl">
-              <div className="text-4xl font-bold text-[#e03000]">20+</div>
-              <div className="text-sm text-white/70">年专业经验</div>
+            <div className="absolute -bottom-6 -right-2 sm:-bottom-8 sm:right-8 bg-[#1a1a1a] text-white px-6 py-4 sm:px-8 sm:py-6 rounded-xl shadow-2xl">
+              <div className="text-3xl sm:text-4xl font-bold text-[#e03000]">20+</div>
+              <div className="text-xs sm:text-sm text-white/70">年专业经验</div>
             </div>
           </div>
 
           {/* Right Column - Content */}
           <div
-            className={`transition-all duration-1000 ease-impact delay-200 ${
-              isVisible
+            className={`transition-all duration-1000 ease-impact delay-200 ${isVisible
                 ? 'translate-x-0 opacity-100'
                 : 'translate-x-12 opacity-0'
-            }`}
+              }`}
           >
             <div className="inline-block px-4 py-2 bg-[#e03000]/10 text-[#e03000] text-sm font-medium rounded-full mb-6">
               关于我们
@@ -131,11 +129,10 @@ const About = () => {
               {features.map((feature, index) => (
                 <div
                   key={feature.title}
-                  className={`flex items-start gap-4 transition-all duration-700 ease-impact ${
-                    isVisible
+                  className={`flex items-start gap-4 transition-all duration-700 ease-impact ${isVisible
                       ? 'translate-y-0 opacity-100'
                       : 'translate-y-8 opacity-0'
-                  }`}
+                    }`}
                   style={{ transitionDelay: `${400 + index * 100}ms` }}
                 >
                   <div className="w-12 h-12 bg-[#e03000]/10 rounded-lg flex items-center justify-center flex-shrink-0">

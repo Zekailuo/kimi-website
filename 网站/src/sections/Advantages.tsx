@@ -83,11 +83,10 @@ const Advantages = () => {
           <div className="relative">
             <div className="lg:sticky lg:top-32">
               <div
-                className={`relative aspect-video rounded-2xl overflow-hidden transition-all duration-1000 ease-impact ${
-                  isVisible
+                className={`relative aspect-video rounded-2xl overflow-hidden transition-all duration-1000 ease-impact ${isVisible
                     ? 'translate-x-0 opacity-100'
                     : '-translate-x-12 opacity-0'
-                }`}
+                  }`}
               >
                 <img
                   src="/images/company/workshop.jpg"
@@ -103,11 +102,10 @@ const Advantages = () => {
 
               {/* Stats cards */}
               <div
-                className={`grid grid-cols-3 gap-4 mt-6 transition-all duration-1000 ease-impact delay-300 ${
-                  isVisible
+                className={`grid grid-cols-3 gap-4 mt-6 transition-all duration-1000 ease-impact delay-300 ${isVisible
                     ? 'translate-y-0 opacity-100'
                     : 'translate-y-8 opacity-0'
-                }`}
+                  }`}
               >
                 <div className="bg-white rounded-xl p-4 shadow-sm">
                   <div className="text-2xl font-bold text-[#e03000]">99%</div>
@@ -128,11 +126,10 @@ const Advantages = () => {
           {/* Right Column - Advantages List */}
           <div>
             <div
-              className={`mb-12 transition-all duration-1000 ease-impact ${
-                isVisible
+              className={`mb-12 transition-all duration-1000 ease-impact ${isVisible
                   ? 'translate-y-0 opacity-100'
                   : 'translate-y-8 opacity-0'
-              }`}
+                }`}
             >
               <div className="inline-block px-4 py-2 bg-[#e03000]/10 text-[#e03000] text-sm font-medium rounded-full mb-6">
                 我们的优势
@@ -150,60 +147,53 @@ const Advantages = () => {
               {advantages.map((advantage, index) => (
                 <div
                   key={advantage.title}
-                  className={`group p-6 rounded-xl transition-all duration-500 ease-impact cursor-pointer ${
-                    activeIndex === index
+                  className={`group p-6 rounded-xl transition-all duration-500 ease-impact cursor-pointer ${activeIndex === index
                       ? 'bg-white shadow-lg'
                       : 'bg-white/50 hover:bg-white hover:shadow-md'
-                  } ${
-                    isVisible
+                    } ${isVisible
                       ? 'translate-x-0 opacity-100'
                       : 'translate-x-12 opacity-0'
-                  }`}
+                    }`}
                   style={{ transitionDelay: `${200 + index * 100}ms` }}
                   onMouseEnter={() => setActiveIndex(index)}
                 >
                   <div className="flex items-start gap-4">
                     <div
-                      className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
-                        activeIndex === index
+                      className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300 ${activeIndex === index
                           ? 'bg-[#e03000]'
                           : 'bg-[#e03000]/10 group-hover:bg-[#e03000]/20'
-                      }`}
+                        }`}
                     >
                       <advantage.icon
-                        className={`w-6 h-6 transition-colors duration-300 ${
-                          activeIndex === index
+                        className={`w-6 h-6 transition-colors duration-300 ${activeIndex === index
                             ? 'text-white'
                             : 'text-[#e03000]'
-                        }`}
+                          }`}
                       />
                     </div>
                     <div className="flex-1">
                       <h3
-                        className={`text-lg font-semibold mb-2 transition-colors duration-300 ${
-                          activeIndex === index
+                        className={`text-lg font-semibold mb-2 transition-colors duration-300 ${activeIndex === index
                             ? 'text-[#e03000]'
                             : 'text-[#1a1a1a]'
-                        }`}
+                          }`}
                       >
                         {advantage.title}
                       </h3>
                       <p
-                        className={`text-sm leading-relaxed transition-all duration-500 ${
-                          activeIndex === index
-                            ? 'text-[#1a1a1a]/70 max-h-40'
-                            : 'text-[#1a1a1a]/50 max-h-0 lg:max-h-40 overflow-hidden'
-                        }`}
+                        className={`text-sm leading-relaxed transition-all duration-500 ${activeIndex === index
+                            ? 'text-[#1a1a1a]/70 max-h-40 opacity-100'
+                            : 'text-[#1a1a1a]/50 max-h-0 lg:max-h-40 overflow-hidden lg:opacity-100 opacity-0'
+                          }`}
                       >
                         {advantage.description}
                       </p>
                     </div>
                     <div
-                      className={`w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300 ${
-                        activeIndex === index
+                      className={`w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300 ${activeIndex === index
                           ? 'bg-[#e03000] scale-100'
                           : 'bg-[#e03000]/20 scale-0'
-                      }`}
+                        }`}
                     >
                       <Check className="w-4 h-4 text-white" />
                     </div>

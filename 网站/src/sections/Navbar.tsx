@@ -50,11 +50,10 @@ const Navbar = ({ variant = 'home' }: NavbarProps) => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ease-impact ${
-        isScrolled || variant === 'detail'
+      className={`fixed top-0 left-0 right-0 z-[200] transition-all duration-500 ease-impact ${isScrolled || variant === 'detail' || isMobileMenuOpen
           ? 'bg-[#1a1a1a]/90 backdrop-blur-md py-3'
           : 'bg-transparent py-6'
-      }`}
+        }`}
     >
       <div className="w-full section-padding">
         <div className="flex items-center justify-between">
@@ -110,9 +109,8 @@ const Navbar = ({ variant = 'home' }: NavbarProps) => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden absolute top-full left-0 right-0 bg-[#1a1a1a]/95 backdrop-blur-md transition-all duration-500 ease-impact overflow-hidden ${
-          isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}
+        className={`lg:hidden fixed top-0 left-0 right-0 bottom-0 bg-[#1a1a1a] z-[150] transition-all duration-500 ease-impact flex flex-col pt-24 ${isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
+          }`}
       >
         <div className="section-padding py-4 flex flex-col gap-4">
           {navLinks.map((link) => (
