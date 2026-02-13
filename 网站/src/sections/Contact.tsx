@@ -87,20 +87,20 @@ const Contact = () => {
           {/* Left Column - Image & Info */}
           <div
             className={`relative transition-all duration-1000 ease-impact ${isVisible
-              ? 'translate-x-0 opacity-100'
-              : '-translate-x-12 opacity-0'
+                ? 'translate-x-0 opacity-100'
+                : '-translate-x-12 opacity-0'
               }`}
           >
-            <div className="relative min-h-[600px] lg:h-full rounded-2xl lg:rounded-none lg:rounded-r-2xl overflow-hidden">
+            <div className="relative aspect-[4/3] lg:aspect-auto lg:h-full rounded-2xl lg:rounded-none lg:rounded-r-2xl overflow-hidden">
               <img
                 src="/images/contact-factory.jpg"
                 alt="联系我们"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/80 via-[#1a1a1a]/50 to-transparent" />
 
               {/* Contact Info Overlay */}
-              <div className="relative h-full p-8 lg:p-12 flex flex-col justify-end min-h-[600px]">
+              <div className="absolute inset-0 p-8 lg:p-12 flex flex-col justify-end">
                 <div className="mb-8">
                   <div className="inline-block px-4 py-2 bg-[#e03000]/20 text-[#e03000] text-sm font-medium rounded-full mb-4">
                     联系我们
@@ -118,8 +118,8 @@ const Contact = () => {
                     <div
                       key={info.title}
                       className={`flex items-start gap-3 transition-all duration-700 ease-impact ${isVisible
-                        ? 'translate-y-0 opacity-100'
-                        : 'translate-y-8 opacity-0'
+                          ? 'translate-y-0 opacity-100'
+                          : 'translate-y-8 opacity-0'
                         }`}
                       style={{ transitionDelay: `${300 + index * 100}ms` }}
                     >
@@ -144,14 +144,14 @@ const Contact = () => {
           {/* Right Column - Form */}
           <div
             className={`flex items-center justify-center transition-all duration-1000 ease-impact delay-200 ${isVisible
-              ? 'translate-x-0 opacity-100'
-              : 'translate-x-12 opacity-0'
+                ? 'translate-x-0 opacity-100'
+                : 'translate-x-12 opacity-0'
               }`}
           >
             <div
               className={`w-full max-w-lg p-8 rounded-2xl transition-all duration-500 ${focusedField
-                ? 'glass-card glow-red'
-                : 'glass-card'
+                  ? 'glass-card glow-red'
+                  : 'glass-card'
                 }`}
             >
               <h3 className="text-2xl font-bold text-white mb-6">
