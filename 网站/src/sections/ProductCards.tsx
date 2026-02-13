@@ -46,14 +46,13 @@ const ProductCards = () => {
     <section
       id="product-levels"
       ref={sectionRef}
-      className="relative w-full bg-[#f5f5f5] py-24 lg:py-32"
+      className="relative w-full bg-[#f5f5f5] pt-24 pb-12 lg:pt-32 lg:pb-16"
     >
       <div className="w-full section-padding">
         {/* Section Header */}
         <div
-          className={`text-center mb-16 transition-all duration-1000 ease-impact ${
-            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-          }`}
+          className={`text-center mb-16 transition-all duration-1000 ease-impact ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+            }`}
         >
           <div className="inline-block px-4 py-2 bg-[#e03000]/10 text-[#e03000] text-sm font-medium rounded-full mb-6">
             防护等级
@@ -72,9 +71,8 @@ const ProductCards = () => {
             <Link
               key={product.id}
               to={`/product/${product.id}`}
-              className={`group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 ease-impact hover:-translate-y-2 cursor-pointer ${
-                isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
-              }`}
+              className={`group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 ease-impact hover:-translate-y-2 cursor-pointer ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
+                }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               {/* Level Badge */}
