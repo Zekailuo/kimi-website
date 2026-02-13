@@ -34,14 +34,14 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1500));
-    
+
     setIsSubmitting(false);
     setIsSubmitted(true);
     setFormData({ name: '', email: '', phone: '', message: '' });
-    
+
     // Reset success message after 5 seconds
     setTimeout(() => setIsSubmitted(false), 5000);
   };
@@ -86,11 +86,10 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-0">
           {/* Left Column - Image & Info */}
           <div
-            className={`relative transition-all duration-1000 ease-impact ${
-              isVisible
+            className={`relative transition-all duration-1000 ease-impact ${isVisible
                 ? 'translate-x-0 opacity-100'
                 : '-translate-x-12 opacity-0'
-            }`}
+              }`}
           >
             <div className="relative aspect-[4/3] lg:aspect-auto lg:h-full rounded-2xl lg:rounded-none lg:rounded-r-2xl overflow-hidden">
               <img
@@ -99,7 +98,7 @@ const Contact = () => {
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/80 via-[#1a1a1a]/50 to-transparent" />
-              
+
               {/* Contact Info Overlay */}
               <div className="absolute inset-0 p-8 lg:p-12 flex flex-col justify-end">
                 <div className="mb-8">
@@ -114,15 +113,14 @@ const Contact = () => {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-4">
                   {contactInfo.map((info, index) => (
                     <div
                       key={info.title}
-                      className={`flex items-start gap-3 transition-all duration-700 ease-impact ${
-                        isVisible
+                      className={`flex items-start gap-3 transition-all duration-700 ease-impact ${isVisible
                           ? 'translate-y-0 opacity-100'
                           : 'translate-y-8 opacity-0'
-                      }`}
+                        }`}
                       style={{ transitionDelay: `${300 + index * 100}ms` }}
                     >
                       <div className="w-10 h-10 bg-[#e03000]/20 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -145,18 +143,16 @@ const Contact = () => {
 
           {/* Right Column - Form */}
           <div
-            className={`flex items-center justify-center transition-all duration-1000 ease-impact delay-200 ${
-              isVisible
+            className={`flex items-center justify-center transition-all duration-1000 ease-impact delay-200 ${isVisible
                 ? 'translate-x-0 opacity-100'
                 : 'translate-x-12 opacity-0'
-            }`}
+              }`}
           >
             <div
-              className={`w-full max-w-lg p-8 rounded-2xl transition-all duration-500 ${
-                focusedField
+              className={`w-full max-w-lg p-8 rounded-2xl transition-all duration-500 ${focusedField
                   ? 'glass-card glow-red'
                   : 'glass-card'
-              }`}
+                }`}
             >
               <h3 className="text-2xl font-bold text-white mb-6">
                 在线咨询
